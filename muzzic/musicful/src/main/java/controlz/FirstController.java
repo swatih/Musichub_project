@@ -2,12 +2,12 @@ package controlz;
 
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+//import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+//import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.ModelAndView;
-@Controller
+@Controller()
 public class FirstController{
  
    @RequestMapping("/")
@@ -30,6 +30,13 @@ public class FirstController{
 	   
       //model.addAttribute("message", "Hello Spring MVC Framework!");
       return new ModelAndView("register");
+   }
+   
+   @RequestMapping("/Instruments")
+   public ModelAndView productpage() {
+	   
+      //model.addAttribute("message", "Hello Spring MVC Framework!");
+      return new ModelAndView("Instruments");
    }
   
 }
