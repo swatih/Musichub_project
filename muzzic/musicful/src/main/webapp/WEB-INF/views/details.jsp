@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
     <%@page isELIgnored="false" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <c:url value="resources/images/" var="img1"/>
@@ -13,34 +13,12 @@
        <script type="text/javascript" src="${boots1}/js/bootstrap.min.js"/></script>
                
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-<style>
-.carousel-inner img
-{
-width:500px;
-min-height:250px;
-margin:auto;
-}
-.container-fluid
-{
-background-color: white;
-}
-
-.part1
-{
-
-color:black;
-}
-</style>
+<title>Product Details</title>
 </head>
 <body>
-
 <div class="container">
-
-
-  <img src="${img1}banner.jpg" width=100% height="100"/> </div>
-
-
+<img src="${img1}banner.jpg" width=100% height="100"/> </div>
+<div class="container">
 <div class="container">
 <div class="row">
 <nav role="navigation" class="navbar navbar-inverse">
@@ -76,32 +54,31 @@ color:black;
   </nav>
 </div>
 </div>
-<div class="container">
-<div class="row">
-  <div id="the-slider" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-  <div class="item active">
-  <img src="${img1}guitar1.jpg" width=100% height=150px>
-  </div>
-  <div class="item">
-  <img src="${img1}Sitar.jpg" width=100% height=150px>
-  </div>
-  <div class="item">
-  <img src="${img1}tabla1.jpg" width=100% height=150px>
-  </div>
-  
-  
- <a class="left carousel-control" href="#the-slider" role="button" data-slide="prev">
- <span class="glyphicon glyphicon-chevron-left"></span>
- </a>
- <a class="right carousel-control" href="#the-slider" role="button" data-slide="next">
- <span class="glyphicon glyphicon-chevron-right"></span>
- </a>
-  </div>
-   </div>
-</div>
 
-</div>
-</div>
+
+<%--  --%>
+
+<p>
+Product Details
+<%
+//String s=session.getAttribute("userId").toString();
+String s1=new String();
+
+s1=request.getParameter("passname");;
+String s2=new String();
+s2=request.getParameter("passdesc");;
+String s3=new String();
+s3=request.getParameter("passid");;
+String s4=new String();
+s4=request.getParameter("passbrand");;
+String s5=new String();
+s5=request.getParameter("passprice");;
+out.println(s1+"  "+s2+" "+s3+" "+s4+" "+s5);
+
+%>
+
+ </p>
+
+HEllo
 </body>
 </html>

@@ -9,7 +9,6 @@
   <name>musicful Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
-  
   <dependencies>
    
     <dependency>
@@ -34,6 +33,7 @@
         <artifactId>spring-web</artifactId>
         <version>4.2.5.RELEASE</version>
     </dependency>
+    
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
@@ -43,19 +43,57 @@
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
       <version>1.2</version>
+      <scope>runtime</scope>
 </dependency>
-    
-     </dependencies>
-  <repositories>
-    <repository>
-        <id>spring-milestones</id>
-        <name>Spring Milestones</name>
-        <url>https://repo.spring.io/libs-milestone</url>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </repository>
-</repositories>
+   <dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.2.4</version>
+    </dependency>
+   <dependency>
+	<groupId>javax.el</groupId>
+	<artifactId>javax.el-api</artifactId>
+	<version>3.0.0</version>
+</dependency>
+   <dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-orm</artifactId>
+	<version>4.2.6.RELEASE</version>
+</dependency>
+<dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate-core</artifactId>
+	<version>5.1.0.Final</version>
+</dependency>
+<dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate-entitymanager</artifactId>
+	<version>5.1.0.Final</version>
+</dependency>
+
+<dependency>
+	<groupId>org.eclipse.persistence</groupId>
+	<artifactId>javax.persistence</artifactId>
+	<version>2.1.1</version>
+</dependency>
+<dependency>
+	<groupId>org.hibernate.javax.persistence</groupId>
+	<artifactId>hibernate-jpa-2.0-api</artifactId>
+	<version>1.0.1.Final</version>
+</dependency>
+<dependency>
+	<groupId>com.h2database</groupId>
+	<artifactId>h2</artifactId>
+	<version>1.4.191</version>
+</dependency>
+
+
+
+   
+  </dependencies>
+  
+  
+
   
   
   <build>
